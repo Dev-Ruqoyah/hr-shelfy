@@ -6,8 +6,23 @@ export default {
   ],
 
   theme: {
-    extend: {},
+    extend: {
+      backgroundColor:{
+        primary:"#f5f5DC",
+        supporting: "#4B382A",
+        secondary: "#DAA520",
+        ssecondary:"#708090"
+      },
+      colors:{
+        primary: "#f5f5DC",
+        supporting: "#4B382A",
+         secondary: "#DAA520",
+        ssecondary:"#708090"
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
 }
 
