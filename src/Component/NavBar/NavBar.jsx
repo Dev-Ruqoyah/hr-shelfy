@@ -3,12 +3,12 @@ import { Link, NavLink } from "react-router-dom";
 const NavBar = () => {
   return (
     <>
-      <div className="navbar bg-transparent mx-auto lg:w-[50%] md:w-[70%] w-[98%] border rounded-badge">
+      <div className="navbar    bg-primarytwo mx-auto lg:w-[50%] md:w-[70%] w-[98%] border rounded-badge">
         <div className="flex items-center justify-between  w-full">
           {/* Logo */}
           <div className="flex-1">
             <Link to="/" className="btn btn-ghost text-xl">
-              hr-shelfly
+              shelfly
             </Link>
           </div>
 
@@ -20,7 +20,7 @@ const NavBar = () => {
                 <NavLink 
                   to="/"
                   className={({ isActive }) =>
-                    isActive ? "text-primary font-bold" : "hover:text-secondary"
+                    isActive ? "text-supporting font-bold" : "hover:text-supporting"
                   }
                 >
                   Home
@@ -32,7 +32,7 @@ const NavBar = () => {
                 <NavLink 
                   to="/search"
                   className={({ isActive }) =>
-                    isActive ? "text-primary font-bold" : "hover:text-secondary"
+                    isActive ? "text-primary font-bold" : "hover:text-supporting"
                   }
                 >
                   Browse
@@ -42,27 +42,27 @@ const NavBar = () => {
               {/* Dropdown Menu */}
               <li>
                 <details>
-                  <summary className="cursor-pointer hover:text-secondary">
+                  <summary className="cursor-pointer hover:text-supporting">
                     Genres
                   </summary>
-                  <ul className="bg-base-100 rounded-t-none p-2">
+                  <ul className="bg-primary rounded-t-none p-2">
                     <li>
-                      <NavLink to="/genre/fiction" className="hover:text-secondary">
+                      <NavLink to="/genre/fiction" className="hover:text-supporting">
                         Fiction
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/genre/non-fiction" className="hover:text-secondary">
+                      <NavLink to="/genre/non-fiction" className="hover:text-supporting">
                         Non-Fiction
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/genre/romance" className="hover:text-secondary">
+                      <NavLink to="/genre/romance" className="hover:text-supporting">
                         Romance
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/genre/mystery" className="hover:text-secondary">
+                      <NavLink to="/genre/mystery" className="hover:text-supporting">
                         Mystery
                       </NavLink>
                     </li>
