@@ -21,7 +21,7 @@ const Hero = () => {
           <NavBar />
 
           {/* Hero Section */}
-          <div className="grid md:grid-cols-2 px-5 h-full">
+          <div className="grid md:grid-cols-2 lg:ps-16 px-5 h-full">
             {/* Text Content */}
             <div className="flex flex-col gap-3  items-center justify-center my-auto mx-auto">
               <h1 className="font-bold  text-3xl  lg:text-6xl md:text-5xl text-supporting">

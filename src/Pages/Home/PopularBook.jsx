@@ -13,6 +13,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const PopularBook = () => {
   const [bookList, setBookList] = useState([]);
@@ -28,7 +29,7 @@ const PopularBook = () => {
       <div className="bg-primary py-8  ">
         <SubNav subNav={"Recently Released"} />
 
-        <div className="container px-6 mx-auto relative">
+        <div className="container  px-8 mx-auto relative">
           <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={20}
@@ -47,12 +48,17 @@ const PopularBook = () => {
             }}
           >
             {bookList.map((book) => (
-              <SwiperSlide key={book.id}>
-                <BookCard
-                  img={book.volumeInfo.imageLinks?.thumbnail || book.titie}
-                  title={book.volumeInfo.titie}
-                />
-              </SwiperSlide>
+              <Link to={`/book/${book.id}`}>
+                <SwiperSlide key={book.id}>
+                  <BookCard
+                    img={book.volumeInfo.imageLinks?.thumbnail || book.title}
+                    title={book.volumeInfo.title}
+                    description={book.volumeInfo.description}
+                    author={book.volumeInfo.authors[0]}
+                    imagecover={book.volumeInfo.imageLinks?.thumbnail}
+                  />
+                </SwiperSlide>
+              </Link>
             ))}
           </Swiper>
           {/* Buttons outside the Swiper */}

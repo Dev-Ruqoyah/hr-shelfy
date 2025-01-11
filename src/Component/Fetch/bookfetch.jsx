@@ -13,7 +13,7 @@ const BookFetch = ({ url, setBookList }) => {
             api_key: import.meta.env.VITE_GOOGLE_API_KEY, 
           },
         });
-        console.log(data.items);
+        console.log(data.items  );
         setBookList(data.items); 
       } catch (error) {
         console.error("Error fetching book data:", error);
