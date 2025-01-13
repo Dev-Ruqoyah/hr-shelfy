@@ -48,17 +48,20 @@ const PopularBook = () => {
             }}
           >
             {bookList.map((book) => (
-              <Link to={`/book/${book.id}`}>
+             
                 <SwiperSlide key={book.id}>
-                  <BookCard
+                   <Link to={`/book/${book.volumeInfo.title}/${book.id}`}>
+                   <BookCard
                     img={book.volumeInfo.imageLinks?.thumbnail || book.title}
                     title={book.volumeInfo.title}
                     description={book.volumeInfo.description}
                     author={book.volumeInfo.authors[0]}
                     imagecover={book.volumeInfo.imageLinks?.thumbnail}
                   />
+                   </Link>
+                  
                 </SwiperSlide>
-              </Link>
+              
             ))}
           </Swiper>
           {/* Buttons outside the Swiper */}

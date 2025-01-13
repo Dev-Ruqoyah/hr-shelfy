@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect } from "react";
 
 // Component to fetch books from the API
-const BookFetch = ({ url, setBookList }) => {
+const EachBookFetch = ({ url, setBookList }) => {
 
   
   useEffect(() => {
@@ -13,8 +13,8 @@ const BookFetch = ({ url, setBookList }) => {
             api_key: import.meta.env.VITE_GOOGLE_API_KEY, 
           },
         });
-        console.log(data.items);
-        setBookList(data.items); 
+        console.log(data);
+        setBookList(data); 
       } catch (error) {
         console.error("Error fetching book data:", error);
       }
@@ -26,4 +26,4 @@ const BookFetch = ({ url, setBookList }) => {
   return null; 
 };
 
-export default BookFetch;
+export default EachBookFetch;
