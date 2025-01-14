@@ -21,7 +21,7 @@ const EachBookFetch = ({ url, setBookList }) => {
     };
 
     fetchDetails();
-  }, [url, setBookList]);
+  }, [url]);
 
   return null; 
 };
