@@ -1,8 +1,10 @@
 import axios from "axios";
 import { useEffect } from "react";
 
+
 // Component to fetch books from the API
-const BookFetch = ({ url, setBookList }) => {
+const BookFetch = ({ url, setBookList,setError,setLoading }) => {
+
 
   
   useEffect(() => {
@@ -15,8 +17,13 @@ const BookFetch = ({ url, setBookList }) => {
         });
         console.log(data.items);
         setBookList(data.items); 
+        setLoading(false)
+        
       } catch (error) {
         console.error("Error fetching book data:", error);
+        setError("Error fetching book data")
+      }finally{
+        setLoading(false)
       }
     };
 

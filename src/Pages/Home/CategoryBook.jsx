@@ -76,7 +76,7 @@ const CategoryBook = () => {
         {loading ? (
           <Loader/>
         ) : error ? (
-          <div className="text-center py-10">
+          <div >
             <p className="text-red-500 text-lg">{error}</p>
           </div>
         ) : (
